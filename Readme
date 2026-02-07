@@ -1,0 +1,30 @@
+# Google Sheet Live View
+
+This is a simple static website that reads a public Google Sheet and refreshes quickly so updates show up fast.
+
+## Quick start
+
+1. Publish your Google Sheet: **File → Share → Publish to the web**.
+2. Copy the Sheet ID from the URL (the long string between `/d/` and `/edit`).
+3. Open `app.js` and update:
+
+```js
+const sheetConfig = {
+  sheetId: "YOUR_SHEET_ID",
+  sheetName: "Sheet1",
+  refreshIntervalMs: 10000,
+};
+```
+
+4. Run a local server and open the page:
+
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## Notes
+
+- Keep the first row of the sheet as headers to label the table columns.
+- The page uses the Google Visualization endpoint, which is fast and does not require an API key for published sheets.
