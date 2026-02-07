@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Google Sheet Live View</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page__header">
+        <div>
+          <p class="eyebrow">Live data</p>
+          <h1>Google Sheet Live View</h1>
+          <p class="subtitle">
+            This page refreshes fast from a public Google Sheet. Update the sheet and
+            the table below will update automatically.
+          </p>
+        </div>
+        <div class="actions">
+          <button id="refreshButton" class="button">Refresh now</button>
+          <span id="status" class="status">Waiting for first refresh…</span>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="card__header">
+          <div>
+            <h2>Sheet data</h2>
+            <p class="muted" id="lastUpdated">Last updated: never</p>
+          </div>
+          <div class="badge">Auto-refresh: <span id="refreshInterval">10</span>s</div>
+        </div>
+        <div class="table-wrapper">
+          <table id="sheetTable">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card info">
+        <h3>How to connect your sheet</h3>
+        <ol>
+          <li>Publish your sheet to the web: <span class="code">File → Share → Publish to the web</span>.</li>
+          <li>Copy the Sheet ID from the URL (the long string between <span class="code">/d/</span> and <span class="code">/edit</span>).</li>
+          <li>Update <span class="code">sheetId</span> and <span class="code">sheetName</span> in <span class="code">app.js</span>.</li>
+        </ol>
+        <p class="muted">
+          Tip: keep the first row of your sheet as headers for a nice table layout.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
