@@ -1,0 +1,150 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1d2330;
+  --muted: #586074;
+  --accent: #2f6bff;
+  --border: #e3e6ef;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  max-width: 560px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(47, 107, 255, 0.25);
+}
+
+.button:hover {
+  opacity: 0.92;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(12, 17, 29, 0.08);
+  border: 1px solid var(--border);
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(47, 107, 255, 0.1);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+#sheetTable {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 520px;
+}
+
+#sheetTable th,
+#sheetTable td {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#sheetTable th {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+#sheetTable tbody tr:hover {
+  background: #f2f5ff;
+}
+
+.info ol {
+  padding-left: 18px;
+}
+
+.code {
+  font-family: "SFMono-Regular", ui-monospace, monospace;
+  background: #f1f4ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
